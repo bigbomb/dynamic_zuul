@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: gateway
+Implementation-Version: 1.0
+Built-By: ethan
+Implementation-Vendor-Id: com.sinosoft
+Build-Jdk: 1.8.0_191
+Implementation-URL: http://projects.spring.io/spring-boot/zuul-gateway
+ -demo/gateway/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
