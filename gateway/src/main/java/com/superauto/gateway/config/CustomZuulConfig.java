@@ -1,12 +1,13 @@
-package com.sinosoft.gateway.config;
+package com.superauto.gateway.config;
 
-import com.sinosoft.gateway.zuul.CustomRouteLocator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.superauto.gateway.zuul.CustomRouteLocator;
 
 /**
  * Created by xujingfeng on 2017/4/1.
@@ -23,7 +24,7 @@ public class CustomZuulConfig {
 
     @Bean
     public CustomRouteLocator routeLocator() {
-        CustomRouteLocator routeLocator = new CustomRouteLocator(this.server.getServletPrefix(), this.zuulProperties);
+        CustomRouteLocator routeLocator = new CustomRouteLocator(this.server.getServlet().getServletPrefix(), this.zuulProperties);
         routeLocator.setJdbcTemplate(jdbcTemplate);
         return routeLocator;
     }

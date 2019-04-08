@@ -1,10 +1,11 @@
-package com.sinosoft.gateway.web;
+package com.superauto.gateway.web;
 
-import com.sinosoft.gateway.event.RefreshRouteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.zuul.web.ZuulHandlerMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.superauto.gateway.event.RefreshRouteService;
 
 import java.util.Map;
 
