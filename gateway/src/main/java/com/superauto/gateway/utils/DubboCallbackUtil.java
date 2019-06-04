@@ -63,11 +63,11 @@ public class DubboCallbackUtil {
         return registryConfig;
     }
 
-    private static ReferenceConfig getReferenceConfig(String interfaceName, String address,
+    private static ReferenceConfig<Object> getReferenceConfig(String interfaceName, String address,
                                                       String group, String version) {
         String referenceKey = interfaceName;
 
-        ReferenceConfig referenceConfig = referenceCache.get(referenceKey);
+        ReferenceConfig<Object> referenceConfig = referenceCache.get(referenceKey);
         if (null == referenceConfig) {
             try {
                 referenceConfig = new ReferenceConfig<>();
